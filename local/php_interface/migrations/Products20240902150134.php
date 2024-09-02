@@ -3,7 +3,7 @@
 namespace Sprint\Migration;
 
 
-class Products20240901211043 extends Version
+class Products20240902150134 extends Version
 {
     protected $author = "admin";
 
@@ -503,8 +503,7 @@ class Products20240901211043 extends Version
 ));
     
     }
-    
-            public function down()
+    public function down()
     {
         $helper = $this->getHelperManager();
         $ok = $helper->Iblock()->deleteIblockIfExists('products');
