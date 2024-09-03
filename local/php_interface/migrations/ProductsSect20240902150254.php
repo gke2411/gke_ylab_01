@@ -20,7 +20,7 @@ class ProductsSect20240902150254 extends Version
         $helper = $this->getHelperManager();
 
         $iblockId = $helper->Iblock()->getIblockIdIfExists(
-            'produsts',
+            'products',
             'production'
         );
 
@@ -59,4 +59,16 @@ class ProductsSect20240902150254 extends Version
   ),
 )        );
     }
+    
+
+	public function down()
+	{
+		$helper = $this->getHelperManager();
+    	$iblockId3 = $helper->Iblock()->getIblockIdIfExists('products');
+		$arSectionList = $helper->Iblock()->getSections($iblockId3);
+		foreach($arSectionList as $sectionItemCode)
+		{
+			$helper->Iblock()->deleteSectionIfExists($iblockId3, $sectionItemCode);
+		}
+	}
 }

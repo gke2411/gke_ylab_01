@@ -47,7 +47,7 @@ class Products20240902150134 extends Version
   array (
     0 => 's1',
   ),
-  'CODE' => 'produsts',
+  'CODE' => 'products',
   'API_CODE' => NULL,
   'REST_ON' => 'N',
   'NAME' => 'Продукты',
